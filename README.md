@@ -23,5 +23,11 @@ Crear un archivo ./.git/hooks/pre-commit
 ```sh
 #!/usr/bin/env bash
 
-git diff HEAD --name-only --diff-filter=ACM | grep '.go$' | xargs go test
+git diff HEAD --name-only --diff-filter=ACM | grep '.go$' | go test
 ```
+
+Para saltar la verification use `git commit -a --no-verify`
+
+> Nota:
+> Para usar los archivos use el argumento 'xarg'
+> git diff HEAD --name-only --diff-filter=ACM | grep '.go\$' | xargs echo
