@@ -4,6 +4,8 @@
 *.dll
 *.so
 *.dylib
+gomon_spawn
+tags
 
 # Test binary, built with `go test -c`
 *.test

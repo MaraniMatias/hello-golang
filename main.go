@@ -11,7 +11,7 @@ func main() {
 func miSuma(xi ...int) int {
   var sum int
   for _, v := range xi {
-    sum += v
+    sum += v * 1
   }
   return sum
 }

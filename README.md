@@ -10,6 +10,12 @@ Nodemon pero para go
 npm install -g go-mon
 ```
 
+Using
+
+```sh
+ gomon .
+```
+
 ## Git houck
 
 Crear un archivo ./.git/hooks/pre-commit
