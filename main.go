@@ -2,16 +2,27 @@ package main
 
 import "fmt"
 
-func main() {
-  fmt.Println("La suma de 2 + 4 es :", miSuma(2, 4))
-  fmt.Println("La suma de 1 + 5 es :", miSuma(1, 5))
-  fmt.Println("La suma de 6 + 7 es :", miSuma(6, 7))
+type person struct {
+	name string
+	age  int
 }
 
-func miSuma(xi ...int) int {
-  var sum int
-  for _, v := range xi {
-    sum += v
-  }
-  return sum
+// p := Person("Matias", 26)
+func Person(name string, age int) *person {
+	p := person{name: name}
+	p.age = age
+	return &p
+}
+
+const englishHelloPrefix = "Hello, "
+
+func Hello(name string) string {
+	if name == "" {
+		name = "World"
+	}
+	return englishHelloPrefix + name
+}
+
+func main() {
+	fmt.Println(Hello("world"))
 }
